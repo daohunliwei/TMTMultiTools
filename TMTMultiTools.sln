@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMTMultiTools", "TMTMultiTools\TMTMultiTools.csproj", "{D755A029-6B44-4DA6-95D3-0BEF9301CB7B}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{87F38072-6459-4D08-8B0A-6F15D96E38EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMTMultiTools.Common.Test", "TMTMultiTools.Common.Test\TMTMultiTools.Common.Test.csproj", "{F4729D6C-B3DF-4C00-9A1E-5B0DC93722DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMTMultiTools.Model", "TMTMultiTools.Model\TMTMultiTools.Model.csproj", "{0B246D7D-BB00-4318-90C7-37E7CD29CE69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{F4729D6C-B3DF-4C00-9A1E-5B0DC93722DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4729D6C-B3DF-4C00-9A1E-5B0DC93722DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4729D6C-B3DF-4C00-9A1E-5B0DC93722DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B246D7D-BB00-4318-90C7-37E7CD29CE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B246D7D-BB00-4318-90C7-37E7CD29CE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B246D7D-BB00-4318-90C7-37E7CD29CE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B246D7D-BB00-4318-90C7-37E7CD29CE69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

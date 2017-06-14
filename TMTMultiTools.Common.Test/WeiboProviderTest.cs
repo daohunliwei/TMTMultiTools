@@ -10,7 +10,7 @@ namespace TMTMultiTools.Common.Test
         [TestMethod]
         public void TestGetPage()
         {
-            WeiboProvider.GetHtml();
+            WeiboProvider.SearchWeibo();
         }
     }
 }

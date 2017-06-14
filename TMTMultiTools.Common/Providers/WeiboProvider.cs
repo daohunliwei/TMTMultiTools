@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CsharpHttpHelper;
+using TMTMultiTools.Model;
 
 namespace TMTMultiTools.Common.Providers
 {
     public static class WeiboProvider
     {
         public static string cookies = "";
-        public static string GetHtmlByUrl(string url)
+        private static string GetHtmlByUrl(string url)
         {
             string resultHtml = "";
             try
@@ -91,6 +92,18 @@ namespace TMTMultiTools.Common.Providers
             {
             }
             return result;
+        }
+
+
+
+        public static void SearchWeibo()
+        {
+            string url = "http://s.weibo.com/ajax/topsuggest.php?key=韩寒";
+            string result = GetHtmlByUrl(url);
+            var test= HttpHelper.GetBetweenHtml(result, "try{window.&(", ");}catch");
+            test = test.Remove(0, 1);
+            test= test.Remove(test.Length - 1, 1);
+            QuickSearchReturnModel model = Newtonsoft.Json.JsonConvert.DeserializeObject<QuickSearchReturnModel>(test);
         }
     }
 }
