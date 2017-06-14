@@ -27,7 +27,7 @@ namespace TMTMultiTools.Common.Providers
                     Allowautoredirect = true,
                     AutoRedirectCookie = true,
                     Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-                    UserAgent="spider"
+                    UserAgent = "spider"
                     //UserAgent = string.IsNullOrEmpty(cookies)?"spider": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36"
                     //ContentType = "application/x-www-form-urlencoded",//返回类型    可选项有默认值   
                 };
@@ -37,16 +37,16 @@ namespace TMTMultiTools.Common.Providers
                 resultHtml = result.Html;
                 if (string.IsNullOrEmpty(cookies))
                 {
-                    cookies = result.Cookie; 
+                    cookies = result.Cookie;
                 }
-               
+
             }
             catch (Exception ex)
             { }
             return resultHtml;
         }
 
-        public static Dictionary<string,string> GetUIDByURLList(params string[] urls)
+        public static Dictionary<string, string> GetUIDByURLList(params string[] urls)
         {
             Dictionary<string, string> result = new Dictionary<string, string>();
             try
@@ -96,14 +96,25 @@ namespace TMTMultiTools.Common.Providers
 
 
 
-        public static void SearchWeibo()
+        public static IEnumerable<WeiboUserInfo> SearchWeibo(string nickName)
         {
-            string url = "http://s.weibo.com/ajax/topsuggest.php?key=韩寒";
-            string result = GetHtmlByUrl(url);
-            var test= HttpHelper.GetBetweenHtml(result, "try{window.&(", ");}catch");
-            test = test.Remove(0, 1);
-            test= test.Remove(test.Length - 1, 1);
-            QuickSearchReturnModel model = Newtonsoft.Json.JsonConvert.DeserializeObject<QuickSearchReturnModel>(test);
+            try
+            {
+                string url = "http://s.weibo.com/ajax/topsuggest.php?key=" + nickName;
+                string html = GetHtmlByUrl(url);
+                var test = HttpHelper.GetBetweenHtml(html, "try{window.&(", ");}catch");
+                test = test.Remove(0, 1);
+                test = test.Remove(test.Length - 1, 1);//掐头去尾两个()
+                QuickSearchReturnModel model = Newtonsoft.Json.JsonConvert.DeserializeObject<QuickSearchReturnModel>(test);
+                if (model != null)
+                {
+                    if (model.UserData != null)
+                        return model.UserData.UserList;
+                }
+            }
+            catch (Exception)
+            { }
+            return new List<WeiboUserInfo>();
         }
     }
 }

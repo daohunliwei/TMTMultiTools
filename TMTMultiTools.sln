@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMTMultiTools.Common.Test",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMTMultiTools.Model", "TMTMultiTools.Model\TMTMultiTools.Model.csproj", "{0B246D7D-BB00-4318-90C7-37E7CD29CE69}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thirty", "Thirty", "{0214A981-2595-4966-8433-447EE8889E87}"
+	ProjectSection(SolutionItems) = preProject
+		Thirty\CSkin.dll = Thirty\CSkin.dll
+		Thirty\CSkin.XML = Thirty\CSkin.XML
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
