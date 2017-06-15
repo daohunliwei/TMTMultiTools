@@ -40,6 +40,7 @@
             this.cb_https = new System.Windows.Forms.CheckBox();
             this.cb_isnew = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // bt_single
@@ -145,7 +146,18 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "默认通过微博地址进行匹配查找，勾选之后可以使用微博名称匹配，但不确定是否有限制";
             // 
-            // Launcher
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(738, 95);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(75, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 11;
+            this.buttonX1.Text = "buttonX1";
+            // 
+            // WeiboForm
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -153,6 +165,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(870, 515);
+            this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cb_isnew);
             this.Controls.Add(this.cb_https);
@@ -166,7 +179,7 @@
             this.Controls.Add(this.bt_single);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Launcher";
+            this.Name = "WeiboForm";
             this.Text = "入口";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -186,6 +199,7 @@
         private System.Windows.Forms.CheckBox cb_https;
         private System.Windows.Forms.CheckBox cb_isnew;
         private System.Windows.Forms.Label label1;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }
 

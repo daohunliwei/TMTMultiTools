@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms; 
 using System.Runtime.InteropServices;
+using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.Ribbon;
+using DevComponents.DotNetBar.Metro;
+using TMTMultiTools.Helper;
+using TMTMultiTools.Helper.Themes;
 
 namespace TMTMultiTools
 {
-    public partial class Launcher : Form
-    {
+    public partial class Launcher : MetroForm
+    { 
         Weibo.WeiboForm weiboForm = null;
         public Launcher()
         {
@@ -44,6 +49,26 @@ namespace TMTMultiTools
         private void sbt_weixin_Click(object sender, EventArgs e)
         {
             MessageBox.Show("我还没实现……", "提示");
+        }
+
+        private void Launcher_Load(object sender, EventArgs e)
+        {
+            BindCombox();
+        }
+
+        private void BindCombox()
+        {  
+            BindingSource bs = new BindingSource();
+            bs.DataSource = StaticData.ThemeDic;
+            cb_themes.DataSource = bs;
+            cb_themes.ValueMember = "Value";
+            cb_themes.DisplayMember = "Key";
+        }
+
+        private void cb_themes_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            eStyle style = (eStyle)cb_themes.SelectedValue;
+            styleManager1.ManagerStyle = style;
         }
     }
 }

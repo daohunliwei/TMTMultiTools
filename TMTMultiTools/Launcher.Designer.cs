@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using DevComponents.DotNetBar;
+using System.Windows.Forms;
 
 namespace TMTMultiTools
 {
@@ -32,21 +33,23 @@ namespace TMTMultiTools
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Launcher));
-            this.bt_autoupdate = new System.Windows.Forms.Button();
+            this.bt_autoupdate = new DevComponents.DotNetBar.ButtonX();
             this.imageList_main = new System.Windows.Forms.ImageList(this.components);
-            this.SkinToolTip = new ToolTip(this.components);
-            this.sbt_weibo = new Button();
-            this.sbt_weixin = new Button();
+            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
+            this.sbt_weibo = new DevComponents.DotNetBar.ButtonX();
+            this.bt_weixin = new DevComponents.DotNetBar.ButtonX();
+            this.cb_themes = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.SuspendLayout();
             // 
             // bt_autoupdate
             // 
-            this.bt_autoupdate.Location = new System.Drawing.Point(851, 31);
+            this.bt_autoupdate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_autoupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.bt_autoupdate.Location = new System.Drawing.Point(855, 12);
             this.bt_autoupdate.Name = "bt_autoupdate";
             this.bt_autoupdate.Size = new System.Drawing.Size(75, 23);
             this.bt_autoupdate.TabIndex = 0;
             this.bt_autoupdate.Text = "检查更新";
-            this.bt_autoupdate.UseVisualStyleBackColor = true;
             this.bt_autoupdate.Click += new System.EventHandler(this.bt_autoupdate_Click);
             // 
             // imageList_main
@@ -72,40 +75,52 @@ namespace TMTMultiTools
             this.imageList_main.Images.SetKeyName(16, "youku.ico");
             this.imageList_main.Images.SetKeyName(17, "zhihu.ico");
             // 
-            // SkinToolTip
+            // styleManager1
             // 
-            this.SkinToolTip.AutoPopDelay = 5000;
-            this.SkinToolTip.InitialDelay = 500;
-            this.SkinToolTip.OwnerDraw = true;
-            this.SkinToolTip.ReshowDelay = 800;
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Metro;
+            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48))))), System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204))))));
             // 
             // sbt_weibo
             // 
+            this.sbt_weibo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.sbt_weibo.BackColor = System.Drawing.Color.Transparent;
-            this.sbt_weibo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.sbt_weibo.ImageKey = "sina_weibo.ico";
-            this.sbt_weibo.ImageList = this.imageList_main;
-            this.sbt_weibo.Location = new System.Drawing.Point(286, 170);
+            this.sbt_weibo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sbt_weibo.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.sbt_weibo.Image = global::TMTMultiTools.Properties.Resources.sina_weibo;
+            this.sbt_weibo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
+            this.sbt_weibo.Location = new System.Drawing.Point(264, 170);
             this.sbt_weibo.Name = "sbt_weibo";
             this.sbt_weibo.Size = new System.Drawing.Size(120, 120);
-            this.sbt_weibo.TabIndex = 3;
-            this.SkinToolTip.SetToolTip(this.sbt_weibo, "这个是微博");
-            this.sbt_weibo.UseVisualStyleBackColor = false;
+            this.sbt_weibo.TabIndex = 5;
             this.sbt_weibo.Click += new System.EventHandler(this.sbt_weibo_Click);
             // 
-            // sbt_weixin
+            // bt_weixin
             // 
-            this.sbt_weixin.BackColor = System.Drawing.Color.Transparent;
-            this.sbt_weixin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.sbt_weixin.ImageKey = "wechat.ico";
-            this.sbt_weixin.ImageList = this.imageList_main;
-            this.sbt_weixin.Location = new System.Drawing.Point(537, 170);
-            this.sbt_weixin.Name = "sbt_weixin";
-            this.sbt_weixin.Size = new System.Drawing.Size(120, 120);
-            this.sbt_weixin.TabIndex = 4;
-            this.SkinToolTip.SetToolTip(this.sbt_weixin, "这个是微信");
-            this.sbt_weixin.UseVisualStyleBackColor = false;
-            this.sbt_weixin.Click += new System.EventHandler(this.sbt_weixin_Click);
+            this.bt_weixin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_weixin.BackColor = System.Drawing.Color.Transparent;
+            this.bt_weixin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_weixin.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.bt_weixin.Image = global::TMTMultiTools.Properties.Resources.sina_weibo;
+            this.bt_weixin.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom;
+            this.bt_weixin.Location = new System.Drawing.Point(538, 170);
+            this.bt_weixin.Name = "bt_weixin";
+            this.bt_weixin.Size = new System.Drawing.Size(120, 120);
+            this.bt_weixin.TabIndex = 6;
+            this.bt_weixin.Click += new System.EventHandler(this.sbt_weixin_Click);
+            // 
+            // cb_themes
+            // 
+            this.cb_themes.DisplayMember = "Text";
+            this.cb_themes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_themes.ForeColor = System.Drawing.Color.White;
+            this.cb_themes.FormattingEnabled = true;
+            this.cb_themes.ItemHeight = 15;
+            this.cb_themes.Location = new System.Drawing.Point(657, 14);
+            this.cb_themes.Name = "cb_themes";
+            this.cb_themes.Size = new System.Drawing.Size(153, 21);
+            this.cb_themes.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_themes.TabIndex = 7;
+            this.cb_themes.SelectionChangeCommitted += new System.EventHandler(this.cb_themes_SelectionChangeCommitted);
             // 
             // Launcher
             // 
@@ -113,22 +128,28 @@ namespace TMTMultiTools
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 503);
-            this.Controls.Add(this.sbt_weixin);
+            this.Controls.Add(this.cb_themes);
+            this.Controls.Add(this.bt_weixin);
             this.Controls.Add(this.sbt_weibo);
             this.Controls.Add(this.bt_autoupdate);
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Launcher";
             this.Text = "Launcher";
+            this.TitleText = "启动入口";
+            this.Load += new System.EventHandler(this.Launcher_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button bt_autoupdate;
-        private System.Windows.Forms.ImageList imageList_main;
-        private ToolTip SkinToolTip;
-        private Button sbt_weibo;
-        private Button sbt_weixin;
+        private ButtonX bt_autoupdate;
+        private ImageList imageList_main;
+        private DevComponents.DotNetBar.StyleManager styleManager1;
+        private ButtonX sbt_weibo;
+        private ButtonX bt_weixin;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cb_themes;
     }
 }

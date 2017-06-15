@@ -63,6 +63,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="FSLib.Extension, Version=1.4.3.0, Culture=neutral, PublicKeyToken=61d6a007a0eb6994, processorArchitecture=MSIL">
       <HintPath>..\packages\extension.fishlee.net.1.4.3.0\lib\net45\FSLib.Extension.dll</HintPath>
     </Reference>
@@ -87,12 +88,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\ConfigHelper.cs" />
+    <Compile Include="Helper\StaticData\StaticData.cs" />
+    <Compile Include="Helper\StaticExtension.cs" />
+    <Compile Include="Helper\Themes\ThemesHelper.cs" />
     <Compile Include="Launcher.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Launcher.Designer.cs">
       <DependentUpon>Launcher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ConfigInfoModel.cs" />
     <Compile Include="Weibo\WeiboForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,5 +205,6 @@
   <ItemGroup>
     <None Include="Resources\zhihu.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
