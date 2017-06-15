@@ -22,7 +22,7 @@ namespace TMTMultiTools
             Helper.Themes.ThemesHelper.BindingThemesData();
             ConfigHelper.Read();
 
-            Application.Run(new Launcher());
+            Application.Run(new MainLauncher());
         }
     }
 }

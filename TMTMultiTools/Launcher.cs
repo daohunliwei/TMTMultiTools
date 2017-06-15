@@ -16,7 +16,7 @@ using TMTMultiTools.Helper.Themes;
 
 namespace TMTMultiTools
 {
-    public partial class Launcher : MetroForm
+    public partial class Launcher : BaseForm
     { 
         Weibo.WeiboForm weiboForm = null;
         public Launcher()
@@ -53,22 +53,8 @@ namespace TMTMultiTools
 
         private void Launcher_Load(object sender, EventArgs e)
         {
-            BindCombox();
         }
 
-        private void BindCombox()
-        {  
-            BindingSource bs = new BindingSource();
-            bs.DataSource = StaticData.ThemeDic;
-            cb_themes.DataSource = bs;
-            cb_themes.ValueMember = "Value";
-            cb_themes.DisplayMember = "Key";
-        }
-
-        private void cb_themes_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            eStyle style = (eStyle)cb_themes.SelectedValue;
-            styleManager1.ManagerStyle = style;
-        }
+       
     }
 }

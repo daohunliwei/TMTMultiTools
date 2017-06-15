@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TMTMultiTools.Common.Providers;
 using Newtonsoft.Json;
+using DevComponents.DotNetBar.Metro;
+using DevComponents.DotNetBar;
+
 namespace TMTMultiTools.Weibo
 {
-    public partial class WeiboForm : Form
+    public partial class WeiboForm : BaseForm
     {
         public WeiboForm()
         {
@@ -69,6 +72,11 @@ namespace TMTMultiTools.Weibo
             { 
                 label_origin.Text = "原微博地址：";
             }
+        }
+
+        private void WeiboForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,10 +35,8 @@ namespace TMTMultiTools
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Launcher));
             this.bt_autoupdate = new DevComponents.DotNetBar.ButtonX();
             this.imageList_main = new System.Windows.Forms.ImageList(this.components);
-            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.sbt_weibo = new DevComponents.DotNetBar.ButtonX();
             this.bt_weixin = new DevComponents.DotNetBar.ButtonX();
-            this.cb_themes = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.SuspendLayout();
             // 
             // bt_autoupdate
@@ -75,11 +73,6 @@ namespace TMTMultiTools
             this.imageList_main.Images.SetKeyName(16, "youku.ico");
             this.imageList_main.Images.SetKeyName(17, "zhihu.ico");
             // 
-            // styleManager1
-            // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Metro;
-            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48))))), System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204))))));
-            // 
             // sbt_weibo
             // 
             this.sbt_weibo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -108,27 +101,12 @@ namespace TMTMultiTools
             this.bt_weixin.TabIndex = 6;
             this.bt_weixin.Click += new System.EventHandler(this.sbt_weixin_Click);
             // 
-            // cb_themes
-            // 
-            this.cb_themes.DisplayMember = "Text";
-            this.cb_themes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_themes.ForeColor = System.Drawing.Color.White;
-            this.cb_themes.FormattingEnabled = true;
-            this.cb_themes.ItemHeight = 15;
-            this.cb_themes.Location = new System.Drawing.Point(657, 14);
-            this.cb_themes.Name = "cb_themes";
-            this.cb_themes.Size = new System.Drawing.Size(153, 21);
-            this.cb_themes.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_themes.TabIndex = 7;
-            this.cb_themes.SelectionChangeCommitted += new System.EventHandler(this.cb_themes_SelectionChangeCommitted);
-            // 
             // Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 503);
-            this.Controls.Add(this.cb_themes);
             this.Controls.Add(this.bt_weixin);
             this.Controls.Add(this.sbt_weibo);
             this.Controls.Add(this.bt_autoupdate);
@@ -137,7 +115,6 @@ namespace TMTMultiTools
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Launcher";
             this.Text = "Launcher";
-            this.TitleText = "启动入口";
             this.Load += new System.EventHandler(this.Launcher_Load);
             this.ResumeLayout(false);
 
@@ -147,9 +124,7 @@ namespace TMTMultiTools
 
         private ButtonX bt_autoupdate;
         private ImageList imageList_main;
-        private DevComponents.DotNetBar.StyleManager styleManager1;
         private ButtonX sbt_weibo;
         private ButtonX bt_weixin;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cb_themes;
     }
 }
