@@ -59,10 +59,16 @@
     <Compile Include="Launcher.Designer.cs">
       <DependentUpon>Launcher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Weibo\WeiboForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Weibo\WeiboForm.Designer.cs">
+      <DependentUpon>WeiboForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Launcher.resx">
-      <DependentUpon>Launcher.cs</DependentUpon>
+    <EmbeddedResource Include="Weibo\WeiboForm.resx">
+      <DependentUpon>WeiboForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,9 +94,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Weibo\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\TMTMultiTools.Common\TMTMultiTools.Common.csproj">
       <Project>{f443f30d-360c-4d2d-bf16-267f7545eb0c}</Project>
