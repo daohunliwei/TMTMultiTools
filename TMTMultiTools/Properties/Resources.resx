@@ -118,7 +118,109 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitter.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wechat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wechat.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tumblr.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tencent_weibo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tencent_weibo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snapchat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snapchat.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whatsapp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whatsapp.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="douban" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\douban.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="youku" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\youku.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qzone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qzone.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="youdao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\youdao.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vine.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qq.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zhihu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zhihu.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alipay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alipay.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sina_weibo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sina_weibo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="renren" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\renren.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="taobao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\taobao.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alipay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alipay.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="douban" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\douban.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qq.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qzone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qzone.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="renren" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\renren.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sina_weibo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sina_weibo.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snapchat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snapchat.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="taobao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\taobao.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tencent_weibo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tencent_weibo.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tumblr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tumblr.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitter.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vine.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wechat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wechat.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whatsapp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whatsapp.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="youdao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\youdao.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="youku" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\youku.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zhihu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zhihu.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

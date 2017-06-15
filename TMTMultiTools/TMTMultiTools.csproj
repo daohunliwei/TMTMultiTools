@@ -47,7 +47,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>FD130D42E114FC8B251D137BDDD0B5A7B2061DA0</ManifestCertificateThumbprint>
@@ -62,9 +63,6 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSkin">
-      <HintPath>..\Thirty\CSkin.dll</HintPath>
-    </Reference>
     <Reference Include="FSLib.Extension, Version=1.4.3.0, Culture=neutral, PublicKeyToken=61d6a007a0eb6994, processorArchitecture=MSIL">
       <HintPath>..\packages\extension.fishlee.net.1.4.3.0\lib\net45\FSLib.Extension.dll</HintPath>
     </Reference>
@@ -148,7 +146,58 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\alipay.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\douban.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qq.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qzone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\renren.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sina_weibo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snapchat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taobao.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tencent_weibo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vine.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wechat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whatsapp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youdao.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youku.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhihu.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
