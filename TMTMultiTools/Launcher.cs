@@ -16,5 +16,14 @@ namespace TMTMultiTools
         {
             InitializeComponent();
         }
+
+        private void bt_autoupdate_Click(object sender, EventArgs e)
+        {
+            var updater = FSLib.App.SimpleUpdater.Updater.Instance;
+            updater.Context.LogFile = "c:\\log.txt";
+           // FSLib.App.SimpleUpdater.Updater.CheckUpdateSimple("", updateInfoFile);
+
+            FSLib.App.SimpleUpdater.Updater.CheckUpdateSimple("C:\\发布程序\\update.xml");
+        }
     }
 }

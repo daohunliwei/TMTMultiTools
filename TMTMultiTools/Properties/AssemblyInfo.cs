@@ -34,3 +34,6 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+//--添加这行标记表示支持自动更新, 后面的网址为自动更新的根目录.
+//[assembly: FSLib.App.SimpleUpdater.Updateable("http://ls.com/update.xml")]

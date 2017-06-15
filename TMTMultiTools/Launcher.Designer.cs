@@ -28,11 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.bt_autoupdate = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // bt_autoupdate
+            // 
+            this.bt_autoupdate.Location = new System.Drawing.Point(97, 64);
+            this.bt_autoupdate.Name = "bt_autoupdate";
+            this.bt_autoupdate.Size = new System.Drawing.Size(75, 23);
+            this.bt_autoupdate.TabIndex = 0;
+            this.bt_autoupdate.Text = "button1";
+            this.bt_autoupdate.UseVisualStyleBackColor = true;
+            this.bt_autoupdate.Click += new System.EventHandler(this.bt_autoupdate_Click);
+            // 
+            // Launcher
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(933, 503);
+            this.Controls.Add(this.bt_autoupdate);
+            this.Name = "Launcher";
             this.Text = "Launcher";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button bt_autoupdate;
     }
 }
