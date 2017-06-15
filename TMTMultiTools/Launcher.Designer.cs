@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Launcher));
             this.bt_single = new System.Windows.Forms.Button();
             this.rt_input = new System.Windows.Forms.RichTextBox();
             this.rt_output = new System.Windows.Forms.RichTextBox();
             this.tb_input = new System.Windows.Forms.TextBox();
             this.tb_output = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_origin = new System.Windows.Forms.Label();
+            this.label_new = new System.Windows.Forms.Label();
             this.bt_batch = new System.Windows.Forms.Button();
             this.cb_https = new System.Windows.Forms.CheckBox();
+            this.cb_isnew = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bt_single
@@ -52,11 +55,14 @@
             // rt_input
             // 
             this.rt_input.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.rt_input.EnableAutoDragDrop = true;
+            this.rt_input.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.rt_input.Location = new System.Drawing.Point(12, 204);
             this.rt_input.Name = "rt_input";
             this.rt_input.Size = new System.Drawing.Size(377, 299);
             this.rt_input.TabIndex = 1;
             this.rt_input.Text = "";
+            this.rt_input.WordWrap = false;
             // 
             // rt_output
             // 
@@ -81,23 +87,23 @@
             this.tb_output.Size = new System.Drawing.Size(414, 21);
             this.tb_output.TabIndex = 4;
             // 
-            // label1
+            // label_origin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 12);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "原微博地址:";
+            this.label_origin.AutoSize = true;
+            this.label_origin.Location = new System.Drawing.Point(16, 99);
+            this.label_origin.Name = "label_origin";
+            this.label_origin.Size = new System.Drawing.Size(71, 12);
+            this.label_origin.TabIndex = 5;
+            this.label_origin.Text = "原微博地址:";
             // 
-            // label2
+            // label_new
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 12);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "新微博地址:";
+            this.label_new.AutoSize = true;
+            this.label_new.Location = new System.Drawing.Point(16, 139);
+            this.label_new.Name = "label_new";
+            this.label_new.Size = new System.Drawing.Size(71, 12);
+            this.label_new.TabIndex = 6;
+            this.label_new.Text = "新微博地址:";
             // 
             // bt_batch
             // 
@@ -119,21 +125,47 @@
             this.cb_https.Text = "是否启用HTTPS";
             this.cb_https.UseVisualStyleBackColor = true;
             // 
+            // cb_isnew
+            // 
+            this.cb_isnew.AutoSize = true;
+            this.cb_isnew.Location = new System.Drawing.Point(126, 35);
+            this.cb_isnew.Name = "cb_isnew";
+            this.cb_isnew.Size = new System.Drawing.Size(120, 16);
+            this.cb_isnew.TabIndex = 9;
+            this.cb_isnew.Text = "通过微博名称匹配";
+            this.cb_isnew.UseVisualStyleBackColor = true;
+            this.cb_isnew.CheckedChanged += new System.EventHandler(this.cb_isnew_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(473, 12);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "默认通过微博地址进行匹配查找，勾选之后可以使用微博名称匹配，但不确定是否有限制";
+            // 
             // Launcher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AllowDrop = true;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScroll = true;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(870, 515);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cb_isnew);
             this.Controls.Add(this.cb_https);
             this.Controls.Add(this.bt_batch);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_new);
+            this.Controls.Add(this.label_origin);
             this.Controls.Add(this.tb_output);
             this.Controls.Add(this.tb_input);
             this.Controls.Add(this.rt_output);
             this.Controls.Add(this.rt_input);
             this.Controls.Add(this.bt_single);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Launcher";
             this.Text = "入口";
             this.ResumeLayout(false);
@@ -148,10 +180,12 @@
         private System.Windows.Forms.RichTextBox rt_output;
         private System.Windows.Forms.TextBox tb_input;
         private System.Windows.Forms.TextBox tb_output;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_origin;
+        private System.Windows.Forms.Label label_new;
         private System.Windows.Forms.Button bt_batch;
         private System.Windows.Forms.CheckBox cb_https;
+        private System.Windows.Forms.CheckBox cb_isnew;
+        private System.Windows.Forms.Label label1;
     }
 }
 

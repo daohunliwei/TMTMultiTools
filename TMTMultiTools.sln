@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thirty", "Thirty", "{0214A9
 	ProjectSection(SolutionItems) = preProject
 		Thirty\CSkin.dll = Thirty\CSkin.dll
 		Thirty\CSkin.XML = Thirty\CSkin.XML
+		Thirty\logo.ico = Thirty\logo.ico
 	EndProjectSection
 EndProject
 Global

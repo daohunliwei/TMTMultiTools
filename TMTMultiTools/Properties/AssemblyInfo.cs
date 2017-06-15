@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("TMTMultiTools")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("新媒体便捷工具（是的你便捷了我一点都不便捷）")]
+[assembly: AssemblyDescription("懒人专用，解放双手")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TMTMultiTools")]
+[assembly: AssemblyCompany("旧梦纷飞")]
+[assembly: AssemblyProduct("新媒体便捷工具")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("no")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型

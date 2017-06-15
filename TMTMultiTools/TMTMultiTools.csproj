@@ -7,7 +7,7 @@
     <ProjectGuid>{D755A029-6B44-4DA6-95D3-0BEF9301CB7B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TMTMultiTools</RootNamespace>
-    <AssemblyName>TMTMultiTools</AssemblyName>
+    <AssemblyName>新媒体便捷工具</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -29,6 +29,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSkin">
@@ -69,6 +72,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -92,6 +96,9 @@
       <Project>{f443f30d-360c-4d2d-bf16-267f7545eb0c}</Project>
       <Name>TMTMultiTools.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -58,5 +58,17 @@ namespace TMTMultiTools
                 MessageBox.Show("请提供原微博网址，每行一条，注意换行");
             }
         }
+
+        private void cb_isnew_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_isnew.Checked)
+            {
+                label_origin.Text = "原微博名称：";
+            }
+            else
+            { 
+                label_origin.Text = "原微博地址：";
+            }
+        }
     }
 }
