@@ -11,6 +11,100 @@ namespace TMTMultiTools.Common.Providers
     public static class WeiboProvider
     {
         public static string cookies = "";
+
+        public static Dictionary<string, WeiboUserInfo> GetUIDByURLList(params string[] urls)
+        {
+            Dictionary<string, WeiboUserInfo> result = new Dictionary<string, WeiboUserInfo>();
+            try
+            {
+                foreach (var url in urls)
+                {
+                    var html = GetHtmlByUrl(url);
+                    result.AddOrUpdate(url, GetInfoFromHtml(html));
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            return result;
+        }
+
+        public static Dictionary<string, WeiboUserInfo> GetUIDByNameList(params string[] names)
+        {
+            Dictionary<string, WeiboUserInfo> result = new Dictionary<string, WeiboUserInfo>();
+            try
+            {
+                foreach (var name in names)
+                {
+                    result.AddOrUpdate(name, SearchWeibo(name));
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 根据微博的昵称获取相关信息
+        /// </summary>
+        /// <param name="nickName"></param>
+        /// <param name="IsMohu">是否模糊匹配，模糊的话，会返回匹配列表的第一个</param>
+        /// <returns></returns>
+        private static WeiboUserInfo SearchWeibo(string nickName)
+        {
+            try
+            {
+                string url = "http://s.weibo.com/ajax/topsuggest.php?key=" + nickName;
+                string html = GetHtmlByUrl(url);
+                var test = HttpHelper.GetBetweenHtml(html, "try{window.&(", ");}catch");
+                test = test.Remove(0, 1);
+                test = test.Remove(test.Length - 1, 1);//掐头去尾两个()
+                QuickSearchReturnModel model = Newtonsoft.Json.JsonConvert.DeserializeObject<QuickSearchReturnModel>(test);
+                if (model != null)
+                {
+                    if (model.UserData != null && model.UserData.UserList.Any())
+                    {
+                        //说明有数据，那就开始匹配
+                        WeiboUserInfo userInfo = model.UserData.UserList.First();
+                        userInfo.IsTruly = false;
+                        foreach (var item in model.UserData.UserList)
+                        {
+                            if (item.NickName == nickName)
+                            {
+                                userInfo = item;
+                                //100%匹配
+                                userInfo.IsTruly = true;
+                                break;
+                            }
+                        }
+                        return userInfo;
+                    }
+                }
+            }
+            catch (Exception ex)
+            { }
+            return new WeiboUserInfo() { IsTruly = false, UID = "-1" };//这个代表了没有返回值，匹配度为0
+        }
+
+        private static WeiboUserInfo GetInfoFromHtml(string html)
+        {
+            try
+            {
+                string uid = HttpHelper.GetBetweenHtml(html, "oid']='", "';");
+                if (!string.IsNullOrEmpty(uid))
+                {
+                    string nick = HttpHelper.GetBetweenHtml(html, "onick']='", "';");
+                    return new WeiboUserInfo() { UID = uid, NickName = nick, IsTruly = true };
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            return new WeiboUserInfo() { UID = "-1", IsTruly = false }; 
+        }
+
+
         private static string GetHtmlByUrl(string url)
         {
             string resultHtml = "";
@@ -44,109 +138,6 @@ namespace TMTMultiTools.Common.Providers
             catch (Exception ex)
             { }
             return resultHtml;
-        }
-
-        public static Dictionary<string, string> GetUIDByURLList(params string[] urls)
-        {
-            Dictionary<string, string> result = new Dictionary<string, string>();
-            try
-            {
-                foreach (var url in urls)
-                {
-                    var html = GetHtmlByUrl(url);
-                    var oid = GetoidByHtml(html);
-                    var onick = GetonickByHtml(html);
-                    if (result.ContainsKey(oid))
-                        result[oid] = onick;
-                    else
-                        result.Add(oid, onick);
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-            return result;
-        }
-
-        private static string GetoidByHtml(string html)
-        {
-            string result = string.Empty;
-            try
-            {
-                return HttpHelper.GetBetweenHtml(html, "oid']='", "';");
-            }
-            catch (Exception ex)
-            {
-            }
-            return result;
-        }
-
-        private static string GetonickByHtml(string html)
-        {
-            string result = string.Empty;
-            try
-            {
-                return HttpHelper.GetBetweenHtml(html, "onick']='", "';");
-            }
-            catch (Exception ex)
-            {
-            }
-            return result;
-        }
-
-
-        public static Dictionary<string, string> GetUIDByNameList(params string[] names)
-        {
-            Dictionary<string, string> result = new Dictionary<string, string>();
-            try
-            {
-                foreach (var name in names)
-                {
-                    var weiboList = SearchWeibo(name);
-                    if (weiboList.Any())
-                    {
-                        //找到最匹配的一个,如果没有，默认第一个
-                        WeiboUserInfo userInfo=weiboList.First();
-                        foreach (var item in weiboList)
-                        {
-                            if (item.NickName == name)
-                            {
-                                userInfo = item;
-                                break;
-                            }
-                        }
-                        if (result.ContainsKey(userInfo.UID))
-                            result[userInfo.UID] = userInfo.NickName;
-                        else
-                            result.Add(userInfo.UID, userInfo.NickName);
-                    } 
-                   
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-            return result;
-        }
-        public static IEnumerable<WeiboUserInfo> SearchWeibo(string nickName)
-        {
-            try
-            {
-                string url = "http://s.weibo.com/ajax/topsuggest.php?key=" + nickName;
-                string html = GetHtmlByUrl(url);
-                var test = HttpHelper.GetBetweenHtml(html, "try{window.&(", ");}catch");
-                test = test.Remove(0, 1);
-                test = test.Remove(test.Length - 1, 1);//掐头去尾两个()
-                QuickSearchReturnModel model = Newtonsoft.Json.JsonConvert.DeserializeObject<QuickSearchReturnModel>(test);
-                if (model != null)
-                {
-                    if (model.UserData != null)
-                        return model.UserData.UserList;
-                }
-            }
-            catch (Exception ex)
-            { }
-            return new List<WeiboUserInfo>();
         }
     }
 }

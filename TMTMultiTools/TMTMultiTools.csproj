@@ -166,6 +166,10 @@
       <Project>{f443f30d-360c-4d2d-bf16-267f7545eb0c}</Project>
       <Name>TMTMultiTools.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TMTMultiTools.Model\TMTMultiTools.Model.csproj">
+      <Project>{0b246d7d-bb00-4318-90c7-37e7cd29ce69}</Project>
+      <Name>TMTMultiTools.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\alipay.ico" />
@@ -221,6 +225,8 @@
   <ItemGroup>
     <None Include="Resources\zhihu.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,5 +39,11 @@ namespace TMTMultiTools.Model
 
         [JsonProperty("fans_n")]
         public int FansNum { get; set; }
+
+        /// <summary>
+        /// 这个用来判断，是否是100%匹配上了
+        /// </summary>
+        [JsonIgnore]
+        public bool IsTruly { get; set; }
     }
 }

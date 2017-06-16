@@ -40,12 +40,12 @@ namespace TMTMultiTools
             // 
             // BaseForm
             // 
-            this.ClientSize = new System.Drawing.Size(538, 309);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BaseForm";
-            this.Text = "RibbonForm1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.BaseForm_Load);
             this.ResumeLayout(false);
 
