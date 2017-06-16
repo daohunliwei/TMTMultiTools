@@ -115,10 +115,10 @@ namespace TMTMultiTools.Common.Providers
                                 break;
                             }
                         }
-                        if (result.ContainsKey(userInfo.UID.ToString()))
-                            result[userInfo.UID.ToString()] = name;
+                        if (result.ContainsKey(userInfo.UID))
+                            result[userInfo.UID] = userInfo.NickName;
                         else
-                            result.Add(userInfo.UID.ToString(), name);
+                            result.Add(userInfo.UID, userInfo.NickName);
                     } 
                    
                 }
@@ -144,7 +144,7 @@ namespace TMTMultiTools.Common.Providers
                         return model.UserData.UserList;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             { }
             return new List<WeiboUserInfo>();
         }

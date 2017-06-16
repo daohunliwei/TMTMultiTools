@@ -30,6 +30,8 @@
         {
             this.cb_themes = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.bt_weibo = new DevComponents.DotNetBar.ButtonX();
+            this.bt_autoupdate = new DevComponents.DotNetBar.ButtonX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // cb_themes
@@ -37,6 +39,7 @@
             this.cb_themes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_themes.DisplayMember = "Text";
             this.cb_themes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_themes.ForeColor = System.Drawing.Color.Black;
             this.cb_themes.FormattingEnabled = true;
             this.cb_themes.ItemHeight = 15;
             this.cb_themes.Location = new System.Drawing.Point(463, 12);
@@ -59,13 +62,39 @@
             this.bt_weibo.Tooltip = "我是微博";
             this.bt_weibo.Click += new System.EventHandler(this.bt_weibo_Click);
             // 
+            // bt_autoupdate
+            // 
+            this.bt_autoupdate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_autoupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.bt_autoupdate.Location = new System.Drawing.Point(529, 322);
+            this.bt_autoupdate.Name = "bt_autoupdate";
+            this.bt_autoupdate.Size = new System.Drawing.Size(75, 23);
+            this.bt_autoupdate.TabIndex = 4;
+            this.bt_autoupdate.Text = "检查更新";
+            this.bt_autoupdate.Click += new System.EventHandler(this.bt_autoupdate_Click);
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(1, 12);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(302, 49);
+            this.labelX1.TabIndex = 5;
+            this.labelX1.Text = "当前版本号：";
+            // 
             // MainLauncher
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(616, 357);
+            this.Controls.Add(this.labelX1);
+            this.Controls.Add(this.bt_autoupdate);
             this.Controls.Add(this.bt_weibo);
             this.Controls.Add(this.cb_themes);
-            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "MainLauncher";
             this.Text = "入口";
             this.Load += new System.EventHandler(this.MainLauncher_Load);
@@ -77,5 +106,7 @@
 
         private DevComponents.DotNetBar.Controls.ComboBoxEx cb_themes;
         private DevComponents.DotNetBar.ButtonX bt_weibo;
+        private DevComponents.DotNetBar.ButtonX bt_autoupdate;
+        private DevComponents.DotNetBar.LabelX labelX1;
     }
 }

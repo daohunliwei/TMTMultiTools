@@ -23,7 +23,7 @@ namespace TMTMultiTools.Model
     public class WeiboUserInfo
     {
         [JsonProperty("u_id")]
-        public int UID { get; set; }
+        public string UID { get; set; }
 
         [JsonProperty("u_pic")]
         public string Avatar { get; set; }

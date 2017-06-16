@@ -20,6 +20,7 @@ namespace TMTMultiTools
 
         private void MainLauncher_Load(object sender, EventArgs e)
         {
+            labelX1.Text = "当前版本号：" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + "\n";
             BindCombox();
             cb_themes.SelectedIndex = StaticData.ThemeDic.FindIndexByKey(StaticData.GlobalConfig.GlobalTheme.ToString());
         }
@@ -51,6 +52,13 @@ namespace TMTMultiTools
                 weiboForm.Show();
                 weiboForm.Activate();
             }
+        }
+
+        private void bt_autoupdate_Click(object sender, EventArgs e)
+        {
+            var updater = FSLib.App.SimpleUpdater.Updater.Instance;
+            updater.Context.LogFile = "upgradelog.txt"; 
+            FSLib.App.SimpleUpdater.Updater.CheckUpdateSimple("http://softupgrade.loongdream.com/TMTMultiTools/update.xml");
         }
     }
 }

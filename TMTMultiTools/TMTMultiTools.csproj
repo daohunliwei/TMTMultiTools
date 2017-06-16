@@ -103,12 +103,6 @@
     <Compile Include="Helper\StaticData\StaticData.cs" />
     <Compile Include="Helper\StaticExtension.cs" />
     <Compile Include="Helper\Themes\ThemesHelper.cs" />
-    <Compile Include="Launcher.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Launcher.Designer.cs">
-      <DependentUpon>Launcher.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\ConfigInfoModel.cs" />
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
@@ -126,9 +120,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Launcher.resx">
-      <DependentUpon>Launcher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainLauncher.resx">
       <DependentUpon>MainLauncher.cs</DependentUpon>
