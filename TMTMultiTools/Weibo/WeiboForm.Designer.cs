@@ -49,7 +49,7 @@ namespace TMTMultiTools.Weibo
             // bt_single
             // 
             this.bt_single.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_single.Location = new System.Drawing.Point(528, 81);
+            this.bt_single.Location = new System.Drawing.Point(549, 83);
             this.bt_single.Name = "bt_single";
             this.bt_single.Size = new System.Drawing.Size(75, 23);
             this.bt_single.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -60,11 +60,13 @@ namespace TMTMultiTools.Weibo
             // rt_input
             // 
             this.rt_input.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.rt_input.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.rt_input.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.rt_input.EnableAutoDragDrop = true;
+            this.rt_input.ForeColor = System.Drawing.Color.Black;
             this.rt_input.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.rt_input.Location = new System.Drawing.Point(12, 204);
             this.rt_input.Name = "rt_input";
@@ -78,10 +80,12 @@ namespace TMTMultiTools.Weibo
             // rt_output
             // 
             this.rt_output.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.rt_output.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.rt_output.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rt_output.ForeColor = System.Drawing.Color.Black;
             this.rt_output.Location = new System.Drawing.Point(481, 204);
             this.rt_output.Name = "rt_output";
             this.rt_output.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
@@ -98,19 +102,22 @@ namespace TMTMultiTools.Weibo
             // 
             this.tb_input.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_input.DisabledBackColor = System.Drawing.Color.Black;
-            this.tb_input.Location = new System.Drawing.Point(89, 82);
+            this.tb_input.ForeColor = System.Drawing.Color.Black;
+            this.tb_input.Location = new System.Drawing.Point(108, 85);
             this.tb_input.Name = "tb_input";
             this.tb_input.Size = new System.Drawing.Size(414, 21);
             this.tb_input.TabIndex = 3;
             // 
             // tb_output
             // 
+            this.tb_output.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.tb_output.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_output.DisabledBackColor = System.Drawing.Color.Black;
-            this.tb_output.Location = new System.Drawing.Point(89, 122);
+            this.tb_output.ForeColor = System.Drawing.Color.Black;
+            this.tb_output.Location = new System.Drawing.Point(108, 125);
             this.tb_output.Name = "tb_output";
             this.tb_output.Size = new System.Drawing.Size(414, 21);
             this.tb_output.TabIndex = 4;
@@ -166,6 +173,7 @@ namespace TMTMultiTools.Weibo
             // 
             // 
             this.cb_https.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cb_https.ForeColor = System.Drawing.Color.Black;
             this.cb_https.Location = new System.Drawing.Point(14, 56);
             this.cb_https.Name = "cb_https";
             this.cb_https.Size = new System.Drawing.Size(107, 18);
@@ -180,6 +188,7 @@ namespace TMTMultiTools.Weibo
             // 
             // 
             this.cb_isnew.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cb_isnew.ForeColor = System.Drawing.Color.Black;
             this.cb_isnew.Location = new System.Drawing.Point(122, 56);
             this.cb_isnew.Name = "cb_isnew";
             this.cb_isnew.Size = new System.Drawing.Size(125, 18);

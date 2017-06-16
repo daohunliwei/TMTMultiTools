@@ -95,7 +95,39 @@ namespace TMTMultiTools.Common.Providers
         }
 
 
-
+        public static Dictionary<string, string> GetUIDByNameList(params string[] names)
+        {
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            try
+            {
+                foreach (var name in names)
+                {
+                    var weiboList = SearchWeibo(name);
+                    if (weiboList.Any())
+                    {
+                        //找到最匹配的一个,如果没有，默认第一个
+                        WeiboUserInfo userInfo=weiboList.First();
+                        foreach (var item in weiboList)
+                        {
+                            if (item.NickName == name)
+                            {
+                                userInfo = item;
+                                break;
+                            }
+                        }
+                        if (result.ContainsKey(userInfo.UID.ToString()))
+                            result[userInfo.UID.ToString()] = name;
+                        else
+                            result.Add(userInfo.UID.ToString(), name);
+                    } 
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            return result;
+        }
         public static IEnumerable<WeiboUserInfo> SearchWeibo(string nickName)
         {
             try

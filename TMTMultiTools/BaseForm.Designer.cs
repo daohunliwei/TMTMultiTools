@@ -31,25 +31,18 @@ namespace TMTMultiTools
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.mainStyle = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.SuspendLayout();
             // 
             // mainStyle
             // 
-            this.mainStyle.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
-            this.mainStyle.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48))))), System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204))))));
-            // 
-            // styleManager1
-            // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
-            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48))))), System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204))))));
+            this.mainStyle.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2016;
+            this.mainStyle.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199))))));
             // 
             // BaseForm
             // 
             this.ClientSize = new System.Drawing.Size(538, 309);
             this.DoubleBuffered = true;
-            this.EnableGlass = false;
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BaseForm";
             this.Text = "RibbonForm1";
@@ -61,6 +54,5 @@ namespace TMTMultiTools
         #endregion
 
         private DevComponents.DotNetBar.StyleManager mainStyle;
-        private DevComponents.DotNetBar.StyleManager styleManager1;
     }
 }

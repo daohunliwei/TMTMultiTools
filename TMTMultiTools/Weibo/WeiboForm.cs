@@ -23,12 +23,12 @@ namespace TMTMultiTools.Weibo
 
         private void Test_Click(object sender, EventArgs e)
         {
-            string url = tb_input.Text.Trim();
-            if (string.IsNullOrEmpty(url))
+            string parms = tb_input.Text.Trim();
+            if (string.IsNullOrEmpty(parms))
             { MessageBox.Show("请提供原微博网址"); }
             else
             {
-                var result = WeiboProvider.GetUIDByURLList(url);
+                var result = (cb_isnew.CheckState==CheckState.Checked)?WeiboProvider.GetUIDByNameList(parms): WeiboProvider.GetUIDByURLList(parms);
                 if (result != null && result.Any())
                 {
                     var keypair = result.First();
@@ -43,10 +43,10 @@ namespace TMTMultiTools.Weibo
 
         private void bt_batch_Click(object sender, EventArgs e)
         {
-            string[] urls = rt_input.Lines;
-            if (urls.Any())
+            string[] parms = rt_input.Lines;
+            if (parms.Any())
             {
-                var result = WeiboProvider.GetUIDByURLList(urls);
+                var result = (cb_isnew.CheckState == CheckState.Checked) ? WeiboProvider.GetUIDByNameList(parms) : WeiboProvider.GetUIDByURLList(parms);
                 StringBuilder sb = new StringBuilder();
                 foreach (var keypair in result)
                 {
@@ -54,7 +54,7 @@ namespace TMTMultiTools.Weibo
                 }
                 rt_output.Text = sb.ToString();
 
-                MessageBox.Show($"获取完毕，共输入网址{urls.Count()}个，成功获取{result.Count}个");
+                MessageBox.Show($"获取完毕，共输入网址{parms.Count()}个，成功获取{result.Count}个");
             }
             else
             {
