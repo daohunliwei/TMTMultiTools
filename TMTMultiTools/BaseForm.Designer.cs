@@ -47,6 +47,8 @@ namespace TMTMultiTools
             // BaseForm
             // 
             this.ClientSize = new System.Drawing.Size(538, 309);
+            this.DoubleBuffered = true;
+            this.EnableGlass = false;
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BaseForm";

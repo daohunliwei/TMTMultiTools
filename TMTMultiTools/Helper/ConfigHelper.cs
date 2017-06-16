@@ -29,7 +29,7 @@ namespace TMTMultiTools.Helper
             string path = ApplicationRunTimeContext.GetProcessMainModuleDirectory() + @"\config.ini";
             if (File.Exists(path))
             {
-               ConfigInfoModel config= File.ReadAllText(path).ToInstance<ConfigInfoModel>();
+                ConfigInfoModel config = File.ReadAllText(path).ToInstance<ConfigInfoModel>();
                 if (config != null)
                 {
                     StaticData.GlobalConfig = config;
@@ -39,6 +39,11 @@ namespace TMTMultiTools.Helper
                     if (StaticData.GlobalConfig == null)
                         StaticData.GlobalConfig = new ConfigInfoModel() { GlobalTheme = DevComponents.DotNetBar.eStyle.Office2007Blue };
                 }
+            }
+            else
+            {
+                StaticData.GlobalConfig = new ConfigInfoModel();
+                Save();
             }
         }
     }

@@ -44,5 +44,25 @@ namespace TMTMultiTools
             }
             return result;
         }
+
+        public static int FindIndexByKey<T>(this Dictionary<string, T> dic, string key)
+        {
+            int position = 0;
+            bool isFind = false;
+            foreach (var item in dic)
+            {
+                if (item.Key == key)
+                {
+                    isFind = true;
+                    break;
+                }
+                else
+                    position++;
+            }
+            if (isFind)
+                return position;
+            else
+                return -1;
+        }
     }
 }

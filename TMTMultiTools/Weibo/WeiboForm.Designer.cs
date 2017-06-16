@@ -69,8 +69,8 @@ namespace TMTMultiTools.Weibo
             this.rt_input.Location = new System.Drawing.Point(12, 204);
             this.rt_input.Name = "rt_input";
             this.rt_input.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n{\\colortbl ;\\red240\\green240\\blue240;}\r\n\\viewkind4\\uc1\\" +
-    "pard\\cf1\\lang2052\\f0\\fs18\\par\r\n}\r\n";
+    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\c" +
+    "f1\\lang2052\\f0\\fs18\\par\r\n}\r\n";
             this.rt_input.Size = new System.Drawing.Size(377, 299);
             this.rt_input.TabIndex = 1;
             this.rt_input.WordWrap = false;
@@ -85,8 +85,8 @@ namespace TMTMultiTools.Weibo
             this.rt_output.Location = new System.Drawing.Point(481, 204);
             this.rt_output.Name = "rt_output";
             this.rt_output.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n{\\colortbl ;\\red240\\green240\\blue240;}\r\n\\viewkind4\\uc1\\" +
-    "pard\\cf1\\lang2052\\f0\\fs18\\par\r\n}\r\n";
+    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\c" +
+    "f1\\lang2052\\f0\\fs18\\par\r\n}\r\n";
             this.rt_output.Size = new System.Drawing.Size(377, 299);
             this.rt_output.TabIndex = 2;
             // 
@@ -225,8 +225,7 @@ namespace TMTMultiTools.Weibo
             this.Controls.Add(this.rt_output);
             this.Controls.Add(this.rt_input);
             this.Controls.Add(this.bt_single);
-            this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.SystemColors.Control;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "WeiboForm";

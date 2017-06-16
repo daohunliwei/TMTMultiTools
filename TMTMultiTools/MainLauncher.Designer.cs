@@ -39,7 +39,7 @@
             this.cb_themes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_themes.FormattingEnabled = true;
             this.cb_themes.ItemHeight = 15;
-            this.cb_themes.Location = new System.Drawing.Point(463, 57);
+            this.cb_themes.Location = new System.Drawing.Point(463, 12);
             this.cb_themes.Name = "cb_themes";
             this.cb_themes.Size = new System.Drawing.Size(141, 21);
             this.cb_themes.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -65,6 +65,7 @@
             this.ClientSize = new System.Drawing.Size(616, 357);
             this.Controls.Add(this.bt_weibo);
             this.Controls.Add(this.cb_themes);
+            this.DoubleBuffered = true;
             this.Name = "MainLauncher";
             this.Text = "入口";
             this.Load += new System.EventHandler(this.MainLauncher_Load);

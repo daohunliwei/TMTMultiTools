@@ -76,7 +76,6 @@ namespace TMTMultiTools.Weibo
 
         private void WeiboForm_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

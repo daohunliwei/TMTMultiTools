@@ -21,11 +21,11 @@ namespace TMTMultiTools
         private void MainLauncher_Load(object sender, EventArgs e)
         {
             BindCombox();
+            cb_themes.SelectedIndex = StaticData.ThemeDic.FindIndexByKey(StaticData.GlobalConfig.GlobalTheme.ToString());
         }
          
         private void BindCombox()
-        { 
-
+        {  
             BindingSource bs = new BindingSource();
             bs.DataSource = StaticData.ThemeDic;
             cb_themes.DataSource = bs;

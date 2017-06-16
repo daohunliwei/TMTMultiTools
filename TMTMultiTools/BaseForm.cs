@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace TMTMultiTools
 {
-    public partial class BaseForm : Office2007Form
+    public partial class BaseForm : MetroForm
     {
         public BaseForm()
         {
@@ -21,11 +21,15 @@ namespace TMTMultiTools
 
         protected void ChangeStyle(eStyle style)
         {
-            this.mainStyle.ManagerStyle = style;
+            StaticData.GlobalConfig.GlobalTheme = style;
+            this.mainStyle.ManagerStyle = StaticData.GlobalConfig.GlobalTheme;
+            ConfigHelper.Save();
         }
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
+            if (StaticData.GlobalConfig != null)
+                ChangeStyle(StaticData.GlobalConfig.GlobalTheme);
         }
     }
 }
