@@ -90,7 +90,7 @@ namespace TMTMultiTools.Weibo
             this.rt_input.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
     "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\c" +
     "f1\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.rt_input.Size = new System.Drawing.Size(617, 157);
+            this.rt_input.Size = new System.Drawing.Size(371, 157);
             this.rt_input.TabIndex = 1;
             this.rt_input.WordWrap = false;
             // 
@@ -261,12 +261,12 @@ namespace TMTMultiTools.Weibo
             this.rt_detail.EnableAutoDragDrop = true;
             this.rt_detail.ForeColor = System.Drawing.Color.Black;
             this.rt_detail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rt_detail.Location = new System.Drawing.Point(623, 0);
+            this.rt_detail.Location = new System.Drawing.Point(377, 0);
             this.rt_detail.Name = "rt_detail";
             this.rt_detail.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
     "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\c" +
     "f1\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.rt_detail.Size = new System.Drawing.Size(570, 157);
+            this.rt_detail.Size = new System.Drawing.Size(816, 157);
             this.rt_detail.TabIndex = 14;
             this.rt_detail.WordWrap = false;
             // 

@@ -40,6 +40,7 @@ namespace TMTMultiTools.Weibo
                 {
                     pb_working.Value = 0;
                     pb_working.Maximum = parms.Length;
+                    rt_detail.Text = $"任务开始，共{parms.Length}条数据目标，当前时间：{DateTime.Now}\r\n";
                     back_process.RunWorkerAsync(new string[] { parms });
                 }
             }
@@ -56,6 +57,7 @@ namespace TMTMultiTools.Weibo
                 {
                     pb_working.Value = 0;
                     pb_working.Maximum = parms.Length;
+                    rt_detail.Text = $"任务开始，共{parms.Length}条数据目标，当前时间：{DateTime.Now}\r\n";
                     back_process.RunWorkerAsync(parms);
                 }
             }
@@ -167,6 +169,7 @@ namespace TMTMultiTools.Weibo
             var state = (UserProcessModel)e.UserState;
             pb_working.Value = e.ProgressPercentage;
             pb_working.Text = state.ProcessStr;
+            rt_detail.Text += state.ReportStr;
         }
 
         private void back_process_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -198,6 +201,7 @@ namespace TMTMultiTools.Weibo
                     pb_working.Text = "任务完成";
                 }
             }
+            rt_detail.Text += $"当前时间：{DateTime.Now}";
         }
 
         private void bt_cleanDetail_Click(object sender, EventArgs e)

@@ -10,5 +10,6 @@ namespace TMTMultiTools.Model
     {
         public int ProcessNum { get; set; }
         public string ProcessStr { get; set; }
+        public string ReportStr { get; set; }
     }
 }

@@ -19,12 +19,15 @@ namespace TMTMultiTools.Common.Providers
             try
             {
                 int i = 0;
+                Stopwatch stopwatch = new Stopwatch();
                 foreach (var url in urls)
                 {
                     ++i;
+                    stopwatch.Restart();
                     var html = GetHtmlByUrl(url);
                     result.AddOrUpdate(url, GetInfoFromHtml(html));
-                    processChange(i,new UserProcessModel() {ProcessNum=i,ProcessStr=$"正在获取{url}所对应的数据" });
+                    stopwatch.Stop();
+                    processChange(i, new UserProcessModel() { ProcessNum = i, ProcessStr = $"正在获取{url}所对应的数据", ReportStr = $"获取{url}所对应的数据耗时{stopwatch.Elapsed.TotalSeconds}秒\r\n" });
                 }
             }
             catch (Exception ex)
@@ -39,11 +42,14 @@ namespace TMTMultiTools.Common.Providers
             try
             {
                 int i = 0;
+                System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
                 foreach (var name in names)
                 {
-                    ++i;
+                    ++i; 
+                    stopwatch.Restart();
                     result.AddOrUpdate(name, SearchWeibo(name));
-                    processChange(i, new UserProcessModel() { ProcessNum = i, ProcessStr = $"正在获取{name}所对应的数据" });
+                    stopwatch.Stop();
+                    processChange(i, new UserProcessModel() { ProcessNum = i, ProcessStr = $"正在获取{name}所对应的数据",ReportStr=$"获取{name}所对应的数据耗时{stopwatch.Elapsed.TotalSeconds}秒\r\n"});
                 }
             }
             catch (Exception ex)
