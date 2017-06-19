@@ -36,4 +36,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("2.3.0.0")]
 
 //--添加这行标记表示支持自动更新, 后面的网址为自动更新的根目录.
-//[assembly: FSLib.App.SimpleUpdater.Updateable("http://ls.com/update.xml")]
+[assembly:FSLib.App.SimpleUpdater.Updatable2("http://softupgrade.loongdream.com/TMTMultiTools/{0}", "update.xml")]
