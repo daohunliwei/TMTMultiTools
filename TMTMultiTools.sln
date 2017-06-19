@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMTMultiTools", "TMTMultiTools\TMTMultiTools.csproj", "{D755A029-6B44-4DA6-95D3-0BEF9301CB7B}"
 EndProject
@@ -18,6 +18,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thirty", "Thirty", "{0214A981-2595-4966-8433-447EE8889E87}"
 	ProjectSection(SolutionItems) = preProject
 		Thirty\logo.ico = Thirty\logo.ico
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UpgradeInfo", "UpgradeInfo", "{487A371F-1B09-4BA2-93EB-D7C640B4458E}"
+	ProjectSection(SolutionItems) = preProject
+		Thirty\UpgradeInfo\UpgradeInfo.auproj = Thirty\UpgradeInfo\UpgradeInfo.auproj
+		Thirty\UpgradeInfo\UpgradeLog.rtf = Thirty\UpgradeInfo\UpgradeLog.rtf
+		Thirty\UpgradeInfo\UpgradeLog.txt = Thirty\UpgradeInfo\UpgradeLog.txt
 	EndProjectSection
 EndProject
 Global
@@ -53,5 +60,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E3D23616-AD97-464A-8257-422FD1078547} = {87F38072-6459-4D08-8B0A-6F15D96E38EA}
 		{F4729D6C-B3DF-4C00-9A1E-5B0DC93722DA} = {87F38072-6459-4D08-8B0A-6F15D96E38EA}
+		{487A371F-1B09-4BA2-93EB-D7C640B4458E} = {0214A981-2595-4966-8433-447EE8889E87}
 	EndGlobalSection
 EndGlobal

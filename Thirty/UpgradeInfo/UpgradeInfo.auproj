@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<AuProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <UpdateInfo>
+    <AppName>新媒体便捷工具</AppName>
+    <ExecuteTimeout>0</ExecuteTimeout>
+    <TreatErrorAsNotUpdated>false</TreatErrorAsNotUpdated>
+    <PromptUserBeforeAutomaticUpgrade>true</PromptUserBeforeAutomaticUpgrade>
+    <AutoCloseSucceedWindow>true</AutoCloseSucceedWindow>
+    <DeleteMethod>None</DeleteMethod>
+    <PackageSize>0</PackageSize>
+    <ForceUpdate>false</ForceUpdate>
+    <Packages />
+    <HideBeforeExecuteWindow>false</HideBeforeExecuteWindow>
+    <HideAfterExecuteWindow>false</HideAfterExecuteWindow>
+    <MustUpdate>false</MustUpdate>
+    <AutoExitCurrentProcess>false</AutoExitCurrentProcess>
+    <AutoEndProcessesWithinAppDir>true</AutoEndProcessesWithinAppDir>
+    <AutoKillProcesses>false</AutoKillProcesses>
+    <RequreAdminstrorPrivilege>false</RequreAdminstrorPrivilege>
+  </UpdateInfo>
+  <DefaultFileVerificationLevel>Size Hash</DefaultFileVerificationLevel>
+  <DefaultUpdateMethod>VersionCompare</DefaultUpdateMethod>
+  <Files />
+  <ApplicationDirectory>..\TMTMultiTools\bin\Debug</ApplicationDirectory>
+  <DestinationDirectory>..\UpgradePackages</DestinationDirectory>
+  <UpdateRtfNotePath>UpgradeInfo\UpgradeLog.rtf</UpdateRtfNotePath>
+  <CreateCompatiblePackage>true</CreateCompatiblePackage>
+  <CompressPackage>false</CompressPackage>
+  <EnableIncreaseUpdate>false</EnableIncreaseUpdate>
+  <VersionUpdateSrc>..\TMTMultiTools\bin\Debug\新媒体便捷工具.exe</VersionUpdateSrc>
+  <UpdateContentSrc>UpgradeInfo\UpgradeLog.txt</UpdateContentSrc>
+  <PackageExtension>zip</PackageExtension>
+  <UseRandomPackageNaming>true</UseRandomPackageNaming>
+  <CleanBeforeBuild>true</CleanBeforeBuild>
+  <ComponentFlags />
+</AuProject>
