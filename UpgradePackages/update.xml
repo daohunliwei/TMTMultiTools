@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<UpdateInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AppName>新媒体便捷工具</AppName>
+  <AppVersion>2.3.0.0</AppVersion>
+  <ExecuteTimeout>0</ExecuteTimeout>
+  <TreatErrorAsNotUpdated>false</TreatErrorAsNotUpdated>
+  <PromptUserBeforeAutomaticUpgrade>true</PromptUserBeforeAutomaticUpgrade>
+  <AutoCloseSucceedWindow>true</AutoCloseSucceedWindow>
+  <Desc>新媒体便捷工具
+V2.3
+更新日期：2017-6-16 18:37 
+更新内容：
+1、修复了获取信息后清空之前旧数据的BUG
+2、修复了无法生成短连接的BUG
+3、改进了获取信息的速度和准确度
+4、增加进度提示和日志记录
+5、调整更新逻辑
+6、其他</Desc>
+  <Package>55841fab44d7416b958b41affa44112f.zip</Package>
+  <MD5>7FB6686814BE7811132D84A44E123E84</MD5>
+  <DeleteMethod>None</DeleteMethod>
+  <PackageSize>3434456</PackageSize>
+  <ForceUpdate>false</ForceUpdate>
+  <Packages />
+  <HideBeforeExecuteWindow>false</HideBeforeExecuteWindow>
+  <HideAfterExecuteWindow>false</HideAfterExecuteWindow>
+  <RtfUpdateNote>H4sIAAAAAAAEAJVTS4+bMBDuOVL+AzekShv5QYBtbnvpvVJ7mos9trOoLOwCaQ9R/ntnPKSJtFWrHpAHM99jPpszTEvS4Ia5gxBTUjCMpw7Hl1e3nCGNw7L4ngoFaeh6SPjspjku2lYFlBihdIbWFsoYoAya6j2U3lHtDpfLdnMGHPtxIpLiAFMMCo5TjINuavD9KbbqkJs+wjEOcXLLOBVfOnyOwahCq53a6co+2gv86OLP790QKjihLrYbeHVTgNkZpWDuDdHN/cupXzS8YXY7Vwp6NxyN2pND0i2RnVpyR04RyTE7Jcdx3Qv0+EeaqKKVJguJRbabv4khZedJzJrim9lZelfgleBo25Csp3AS3lmg90DSWHNIJMfyRK2bh/pB14VuP9mmWCneoytBZZZwRUs3zeK0nAi3hyhwTxDkk/FU05O0wLk307KZJDg+uUSU2Kz5JDEbyKyLsu+V5IOUFXJ/WPPilbmqp6+fxZH5tyO+Q3mfmF0rrIlYvZXa13Ja3O9wPSn7TsnelFiBY+LO1P7H7HvBcW+4KreSCbIqz47rXvP7e5av7galOtXSGuzNxpUuXz0t0XFsV/rrveCo8z5K3HzqVGeZ/d2UVKdGIMn/4aKYfIMzjQsCr29wvn1xHZbg+TP9iR9+AYwBBcQQBAAA</RtfUpdateNote>
+  <MustUpdate>false</MustUpdate>
+  <AutoExitCurrentProcess>false</AutoExitCurrentProcess>
+  <AutoEndProcessesWithinAppDir>true</AutoEndProcessesWithinAppDir>
+  <AutoKillProcesses>false</AutoKillProcesses>
+  <RequreAdminstrorPrivilege>false</RequreAdminstrorPrivilege>
+</UpdateInfo>

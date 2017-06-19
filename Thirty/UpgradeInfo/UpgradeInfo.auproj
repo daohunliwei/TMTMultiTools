@@ -21,16 +21,16 @@
   <DefaultFileVerificationLevel>Size Hash</DefaultFileVerificationLevel>
   <DefaultUpdateMethod>VersionCompare</DefaultUpdateMethod>
   <Files />
-  <ApplicationDirectory>..\TMTMultiTools\bin\Debug</ApplicationDirectory>
-  <DestinationDirectory>..\UpgradePackages</DestinationDirectory>
-  <UpdateRtfNotePath>UpgradeInfo\UpgradeLog.rtf</UpdateRtfNotePath>
+  <ApplicationDirectory>..\..\TMTMultiTools\bin\Debug</ApplicationDirectory>
+  <DestinationDirectory>..\..\UpgradePackages</DestinationDirectory>
+  <UpdateRtfNotePath>UpgradeLog.rtf</UpdateRtfNotePath>
   <CreateCompatiblePackage>true</CreateCompatiblePackage>
   <CompressPackage>false</CompressPackage>
   <EnableIncreaseUpdate>false</EnableIncreaseUpdate>
-  <VersionUpdateSrc>..\TMTMultiTools\bin\Debug\新媒体便捷工具.exe</VersionUpdateSrc>
-  <UpdateContentSrc>UpgradeInfo\UpgradeLog.txt</UpdateContentSrc>
+  <VersionUpdateSrc>..\..\TMTMultiTools\bin\Debug\新媒体便捷工具.exe</VersionUpdateSrc>
+  <UpdateContentSrc>UpgradeLog.txt</UpdateContentSrc>
   <PackageExtension>zip</PackageExtension>
   <UseRandomPackageNaming>true</UseRandomPackageNaming>
-  <CleanBeforeBuild>true</CleanBeforeBuild>
+  <CleanBeforeBuild>false</CleanBeforeBuild>
   <ComponentFlags />
 </AuProject>
