@@ -105,7 +105,6 @@
     <Compile Include="Helper\ConfigHelper.cs" />
     <Compile Include="Helper\StaticData\StaticData.cs" />
     <Compile Include="Helper\Themes\ThemesHelper.cs" />
-    <Compile Include="Model\ConfigInfoModel.cs" />
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +225,7 @@
     <None Include="Resources\zhihu.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Model\" />
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

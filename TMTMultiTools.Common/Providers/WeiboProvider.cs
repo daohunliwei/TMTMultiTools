@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CsharpHttpHelper;
 using TMTMultiTools.Model;
+using System.Diagnostics;
 
 namespace TMTMultiTools.Common.Providers
 {
@@ -12,15 +13,18 @@ namespace TMTMultiTools.Common.Providers
     {
         public static string cookies = "";
 
-        public static Dictionary<string, WeiboUserInfo> GetUIDByURLList(params string[] urls)
+        public static Dictionary<string, WeiboUserInfo> GetUIDByURLList(Action<int, UserProcessModel> processChange,params string[] urls)
         {
             Dictionary<string, WeiboUserInfo> result = new Dictionary<string, WeiboUserInfo>();
             try
             {
+                int i = 0;
                 foreach (var url in urls)
                 {
+                    ++i;
                     var html = GetHtmlByUrl(url);
                     result.AddOrUpdate(url, GetInfoFromHtml(html));
+                    processChange(i,new UserProcessModel() {ProcessNum=i,ProcessStr=$"正在获取{url}所对应的数据" });
                 }
             }
             catch (Exception ex)
@@ -29,14 +33,17 @@ namespace TMTMultiTools.Common.Providers
             return result;
         }
 
-        public static Dictionary<string, WeiboUserInfo> GetUIDByNameList(params string[] names)
+        public static Dictionary<string, WeiboUserInfo> GetUIDByNameList(Action<int, UserProcessModel> processChange,params string[] names)
         {
             Dictionary<string, WeiboUserInfo> result = new Dictionary<string, WeiboUserInfo>();
             try
             {
+                int i = 0;
                 foreach (var name in names)
                 {
+                    ++i;
                     result.AddOrUpdate(name, SearchWeibo(name));
+                    processChange(i, new UserProcessModel() { ProcessNum = i, ProcessStr = $"正在获取{name}所对应的数据" });
                 }
             }
             catch (Exception ex)
@@ -138,6 +145,11 @@ namespace TMTMultiTools.Common.Providers
             catch (Exception ex)
             { }
             return resultHtml;
+        }
+
+        public static void Test(int value,Action<int> func)
+        {
+            func(value);
         }
     }
 }
