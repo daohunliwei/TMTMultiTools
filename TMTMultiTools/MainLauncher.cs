@@ -28,6 +28,7 @@ namespace TMTMultiTools
              
             updater.Context.LogFile = "upgradelog.txt";
             updater.CheckUpdateComplete += CheckUpdateComplete;
+            updater.Context.EnableEmbedDialog = false;
             updater.BeginCheckUpdateInProcess(); 
         }
 
