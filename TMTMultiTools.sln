@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UpgradeInfo", "UpgradeInfo"
 		Thirty\UpgradeInfo\UpgradeLog.txt = Thirty\UpgradeInfo\UpgradeLog.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WatchProgramma", "WatchProgramma", "{38976648-FBB2-4222-B7B7-7ECA737E1380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchProgramma", "WatchProgramma\WatchProgramma.csproj", "{8AE223C9-DCFC-48D1-9E8D-9F86150B640C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,10 @@ Global
 		{0B246D7D-BB00-4318-90C7-37E7CD29CE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B246D7D-BB00-4318-90C7-37E7CD29CE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B246D7D-BB00-4318-90C7-37E7CD29CE69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AE223C9-DCFC-48D1-9E8D-9F86150B640C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE223C9-DCFC-48D1-9E8D-9F86150B640C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE223C9-DCFC-48D1-9E8D-9F86150B640C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE223C9-DCFC-48D1-9E8D-9F86150B640C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +69,6 @@ Global
 		{E3D23616-AD97-464A-8257-422FD1078547} = {87F38072-6459-4D08-8B0A-6F15D96E38EA}
 		{F4729D6C-B3DF-4C00-9A1E-5B0DC93722DA} = {87F38072-6459-4D08-8B0A-6F15D96E38EA}
 		{487A371F-1B09-4BA2-93EB-D7C640B4458E} = {0214A981-2595-4966-8433-447EE8889E87}
+		{8AE223C9-DCFC-48D1-9E8D-9F86150B640C} = {38976648-FBB2-4222-B7B7-7ECA737E1380}
 	EndGlobalSection
 EndGlobal
