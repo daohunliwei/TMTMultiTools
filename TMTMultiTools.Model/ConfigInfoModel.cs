@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TMTMultiTools.Model
 {
-    public class ConfigInfoModel
+    public class GlobalConfigInfoModel
     {
         public eStyle GlobalTheme { get; set; }
     }

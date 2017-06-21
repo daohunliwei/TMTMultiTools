@@ -12,7 +12,7 @@ namespace TMTMultiTools.Helper
 {
     public static class ConfigHelper
     {
-        public static void Save(ConfigInfoModel config)
+        public static void Save(GlobalConfigInfoModel config)
         {
             string path = ApplicationRunTimeContext.GetProcessMainModuleDirectory()+@"\config.ini";
 
@@ -29,7 +29,7 @@ namespace TMTMultiTools.Helper
             string path = ApplicationRunTimeContext.GetProcessMainModuleDirectory() + @"\config.ini";
             if (File.Exists(path))
             {
-                ConfigInfoModel config = File.ReadAllText(path).ToInstance<ConfigInfoModel>();
+                GlobalConfigInfoModel config = File.ReadAllText(path).ToInstance<GlobalConfigInfoModel>();
                 if (config != null)
                 {
                     StaticData.GlobalConfig = config;
@@ -37,12 +37,12 @@ namespace TMTMultiTools.Helper
                 else
                 {
                     if (StaticData.GlobalConfig == null)
-                        StaticData.GlobalConfig = new ConfigInfoModel() { GlobalTheme = DevComponents.DotNetBar.eStyle.Office2007Blue };
+                        StaticData.GlobalConfig = new GlobalConfigInfoModel() { GlobalTheme = DevComponents.DotNetBar.eStyle.Office2007Blue };
                 }
             }
             else
             {
-                StaticData.GlobalConfig = new ConfigInfoModel();
+                StaticData.GlobalConfig = new GlobalConfigInfoModel();
                 Save();
             }
         }

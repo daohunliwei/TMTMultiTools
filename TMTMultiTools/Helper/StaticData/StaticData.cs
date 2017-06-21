@@ -18,6 +18,6 @@ namespace TMTMultiTools.Helper
         /// <summary>
         /// 全局配置
         /// </summary>
-        public static ConfigInfoModel GlobalConfig { get; set; }
+        public static GlobalConfigInfoModel GlobalConfig { get; set; }
     }
 }
