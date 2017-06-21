@@ -2,6 +2,8 @@
 using System.Text;
 using System.Collections.Generic; 
 using System.Data;
+using Dapper;
+
 namespace TMTMultiTools.Model.DBModel
 {
     //extendconfig
@@ -12,6 +14,7 @@ namespace TMTMultiTools.Model.DBModel
         /// ExtendType
         /// </summary>		
         private int _extendtype;
+        [Key]
         public int ExtendType
         {
             get { return _extendtype; }

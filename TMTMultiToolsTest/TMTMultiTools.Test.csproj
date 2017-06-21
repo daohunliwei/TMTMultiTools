@@ -7,8 +7,8 @@
     <ProjectGuid>{E3D23616-AD97-464A-8257-422FD1078547}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TMTMultiToolsTest</RootNamespace>
-    <AssemblyName>TMTMultiToolsTest</AssemblyName>
+    <RootNamespace>TMTMultiTools.Test</RootNamespace>
+    <AssemblyName>TMTMultiTools.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
