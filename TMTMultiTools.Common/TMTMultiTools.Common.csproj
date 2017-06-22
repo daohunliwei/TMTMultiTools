@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b" />
     <Reference Include="FSLib.Extension, Version=1.4.3.0, Culture=neutral, PublicKeyToken=61d6a007a0eb6994, processorArchitecture=MSIL">
       <HintPath>..\packages\extension.fishlee.net.1.4.3.0\lib\net45\FSLib.Extension.dll</HintPath>
     </Reference>
@@ -56,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\ConfigHelper.cs" />
     <Compile Include="Helper\LogHelper.cs" />
     <Compile Include="Helper\StaticExtension.cs" />
     <Compile Include="Helper\SoftUseHelper.cs" />
@@ -67,6 +69,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TMTMultiTools.DB\TMTMultiTools.DB.csproj">
+      <Project>{f345fe88-cde0-4317-aecc-8469ec35c77f}</Project>
+      <Name>TMTMultiTools.DB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TMTMultiTools.Model\TMTMultiTools.Model.csproj">
       <Project>{0b246d7d-bb00-4318-90c7-37e7cd29ce69}</Project>
       <Name>TMTMultiTools.Model</Name>

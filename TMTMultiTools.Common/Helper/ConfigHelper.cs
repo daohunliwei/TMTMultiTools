@@ -8,7 +8,7 @@ using System.FishExtension;
 using System.FishLib;
 using System.IO;
 
-namespace TMTMultiTools.Helper
+namespace TMTMultiTools
 {
     public static class ConfigHelper
     {

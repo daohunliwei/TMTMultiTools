@@ -35,7 +35,7 @@ namespace TMTMultiTools
             // 
             // mainStyle
             // 
-            this.mainStyle.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2016;
+            this.mainStyle.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Blue;
             this.mainStyle.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199))))));
             // 
             // BaseForm

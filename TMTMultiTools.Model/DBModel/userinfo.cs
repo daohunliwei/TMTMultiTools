@@ -2,6 +2,8 @@
 using System.Text;
 using System.Collections.Generic; 
 using System.Data;
+using Dapper;
+
 namespace TMTMultiTools.Model.DBModel{
 	 	//userinfo
 		public class Userinfo
@@ -11,6 +13,7 @@ namespace TMTMultiTools.Model.DBModel{
 		/// UserID
         /// </summary>		
 		private int _userid;
+        [Key]
         public int UserID
         {
             get{ return _userid; }

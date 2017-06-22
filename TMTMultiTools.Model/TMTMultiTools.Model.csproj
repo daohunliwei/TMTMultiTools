@@ -70,6 +70,7 @@
     <Compile Include="DBModel\Softuseinfo.cs" />
     <Compile Include="DBModel\Userinfo.cs" />
     <Compile Include="FormModel.cs" />
+    <Compile Include="User\UserInfoModel.cs" />
     <Compile Include="WeiboModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

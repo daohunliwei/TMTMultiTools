@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using TMTMultiTools.Common.Providers;
 using TMTMultiTools.Helper;
 
 namespace TMTMultiTools
@@ -25,11 +27,23 @@ namespace TMTMultiTools
             labelX1.Text = "当前版本号：" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + "\n";
             BindCombox();
             cb_themes.SelectedIndex = StaticData.ThemeDic.FindIndexByKey(StaticData.GlobalConfig.GlobalTheme.ToString());
-             
+
             updater.Context.LogFile = "upgradelog.txt";
             updater.CheckUpdateComplete += CheckUpdateComplete;
             updater.Context.EnableEmbedDialog = false;
-            updater.BeginCheckUpdateInProcess(); 
+            updater.BeginCheckUpdateInProcess();
+
+            //添加自定义下拉的UseName
+            if (StaticData.GlobalConfig.RecentUserName != null && StaticData.GlobalConfig.RecentUserName.Any())
+            {
+                tbdrop_username.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                tbdrop_username.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                tbdrop_username.AutoCompleteCustomSource.AddRange(StaticData.GlobalConfig.RecentUserName.ToArray());
+
+                foreach (var item in StaticData.GlobalConfig.RecentUserName)
+                { 
+                }
+            }
         }
 
         private void CheckUpdateComplete(object sender, EventArgs e)
@@ -82,6 +96,45 @@ namespace TMTMultiTools
         private void bt_autoupdate_Click(object sender, EventArgs e)
         {
             Updater.CheckUpdateSimple();
+        }
+
+        private void cb_showpwd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_showpwd.Checked)
+                tb_password.PasswordChar = '\0';
+            else
+                tb_password.PasswordChar = '*';
+        }
+
+        private void bt_login_Click(object sender, EventArgs e)
+        {
+            string username = tbdrop_username.Text;
+            string password = tb_password.Text;
+
+            var userinfo = UserProvider.Instance.Login(username, password);
+            if (userinfo == null)
+            {
+                MessageBox.Show("登录失败请重试");
+
+            }
+            else
+            {
+                tb_Nickname.Text = userinfo.NickName;
+                lb_registertime.Text = userinfo.RegisterTime.ToShortDateString();
+                rtb_machineKey.Text = userinfo.MachineKey;
+
+                p_info.Location = p_login.Location;
+                p_info.Visible = true;
+                p_login.Visible = false;
+
+                StaticData.GlobalConfig.UserInfo = new Model.User.UserInfoModel() { UserId = userinfo.UserId, NickName = userinfo.NickName, RegisterTime = userinfo.RegisterTime, MachineKey = userinfo.MachineKey };
+                if (StaticData.GlobalConfig.RecentUserName == null)
+                    StaticData.GlobalConfig.RecentUserName = new List<string>() { username };
+                else
+                    StaticData.GlobalConfig.RecentUserName.Add(username);
+
+                ConfigHelper.Save();
+            }
         }
     }
 }
