@@ -11,7 +11,24 @@ using MySql.Data.MySqlClient;
 namespace TMTMultiTools.DB
 {
     public class MySqlHelper:BaseDBHelper
-    { 
+    {
+        #region Singleton
+        private static readonly MySqlHelper instance = new MySqlHelper();
+        public static MySqlHelper Instance
+        {
+            get
+            {
+                return instance;
+            }
+        }
+
+        private MySqlHelper()
+        {
+            ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["default"].ConnectionString;
+            DbConnection = new MySqlConnection(ConnectionString);
+            SimpleCRUD.SetDialect(SimpleCRUD.Dialect.MySQL);
+        }
+        #endregion
         public MySqlHelper(string connectionString)
         {
             if (string.IsNullOrEmpty(connectionString))

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TMTMultiTools.Model;
 
-namespace TMTMultiTools.Helper
+namespace TMTMultiTools
 {
     public static class StaticData
     {
@@ -19,5 +19,7 @@ namespace TMTMultiTools.Helper
         /// 全局配置
         /// </summary>
         public static GlobalConfigInfoModel GlobalConfig { get; set; }
+
+        public static string MySqlConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["default"].ConnectionString;
     }
 }

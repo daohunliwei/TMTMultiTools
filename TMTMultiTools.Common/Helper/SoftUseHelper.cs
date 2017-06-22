@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TMTMultiTools.Common
+namespace TMTMultiTools.Common.Helper
 {
-    public class Class1
+    public static class SoftUseHelper
     {
+        public static void AddUseInfo()
+        { }
     }
 }

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigInfoModel.cs" />
+    <Compile Include="ConfigInfo\StaticData.cs" />
     <Compile Include="DBModel\Extendconfig.cs" />
     <Compile Include="DBModel\Extendinfo.cs" />
     <Compile Include="DBModel\Extenduserinfo.cs" />

@@ -103,7 +103,6 @@
       <DependentUpon>MainLauncher.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\ConfigHelper.cs" />
-    <Compile Include="Helper\StaticData\StaticData.cs" />
     <Compile Include="Helper\Themes\ThemesHelper.cs" />
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
